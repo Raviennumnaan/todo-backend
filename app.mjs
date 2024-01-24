@@ -10,7 +10,6 @@ import { fileURLToPath } from "url";
 import { dirname } from "path";
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 
 dotenv.config({ path: "./.env" });
 
@@ -22,5 +21,9 @@ app.use(express.json());
 // Routes
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/todo", todoRouter);
+
+app.use("/", (req, res) => {
+  res.status(200).json({ status: "success", data: null });
+});
 
 export default app;
