@@ -1,5 +1,4 @@
 import express from "express";
-import morgan from "morgan";
 import dotenv from "dotenv";
 import cors from "cors";
 import path from "path";
