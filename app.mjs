@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import cors from "cors";
 
 import userRouter from "./routes/userRoutes.mjs";
 import todoRouter from "./routes/todoRoutes.mjs";
@@ -8,6 +9,7 @@ dotenv.config({ path: "./.env" });
 
 const app = express();
 
+app.use(cors());
 app.use(express.json());
 
 // Routes
