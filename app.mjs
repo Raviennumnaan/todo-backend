@@ -16,7 +16,7 @@ app.use(express.json());
 app.use("/api/v1/user", userRouter);
 app.use("/api/v1/todo", todoRouter);
 
-app.get("/", (req, res) => {
+app.get("/home", (req, res) => {
   res.status(200).json({ status: "success", data: null });
 });
 
