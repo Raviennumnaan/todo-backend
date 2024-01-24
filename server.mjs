@@ -5,7 +5,6 @@ const DB = process.env.DATABASE_URL.replace(
   "<PASSWORD>",
   process.env.DATABASE_PASSWORD
 );
-console.log(DB);
 
 mongoose.connect(DB).then(() => console.log("DB connection successfull"));
 
