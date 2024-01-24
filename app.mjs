@@ -1,21 +1,13 @@
 import express from "express";
 import dotenv from "dotenv";
-import cors from "cors";
-import path from "path";
 
 import userRouter from "./routes/userRoutes.mjs";
 import todoRouter from "./routes/todoRoutes.mjs";
-
-import { fileURLToPath } from "url";
-import { dirname } from "path";
-
-const __filename = fileURLToPath(import.meta.url);
 
 dotenv.config({ path: "./.env" });
 
 const app = express();
 
-app.use(cors());
 app.use(express.json());
 
 // Routes

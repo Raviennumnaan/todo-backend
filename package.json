@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.mjs",
-  "engines": {
-    "node": "18.x"
-  },
   "scripts": {
     "start": "nodemon server.mjs",
     "dev": "nodemon server.mjs",
